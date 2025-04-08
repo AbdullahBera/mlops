@@ -5,6 +5,10 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 import joblib
 import os
+import yaml
+
+params = yaml.safe_load(open("params.yaml"))["features"]
+chi2percentile = params["chi2percentile"]
 
 # File paths
 train_path = "data/adult.data"
