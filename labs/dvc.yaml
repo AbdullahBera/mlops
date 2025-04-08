@@ -1,8 +1,11 @@
-dvc stage add -n prepare \
-  -d src/preprocessing.py \
-  -d data/adult.data \
-  -d data/adult.test \
-  -o data/processed_train_data.csv \
-  -o data/processed_test_data.csv \
-  -o data/pipeline.pkl \
-  python src/preprocessing.py
+stages:
+  prepare:
+    cmd: python src/preprocessing.py
+    deps:
+      - data/adult.data
+      - data/adult.test
+      - src/preprocessing.py
+    outs:
+      - data/processed_train_data.csv
+      - data/processed_test_data.csv
+      - data/pipeline.pkl
