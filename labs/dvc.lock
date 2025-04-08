@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python src/create_features.py
+    cmd: python src/preprocessing.py
     deps:
     - path: data/adult.data
       hash: md5
@@ -11,14 +11,14 @@ stages:
       hash: md5
       md5: 366c746021dc50ad9d933d2817612fc9
       size: 2003132
-    - path: src/create_features.py
+    - path: src/preprocessing.py
       hash: md5
-      md5: cdf71d0a134d539850064cf2b921d1f8
-      size: 2486
+      md5: dbc17fdbedcc2e5ee9beac96f1ae7c6e
+      size: 2060
     outs:
     - path: data/pipeline.pkl
       hash: md5
-      md5: 2f40b1baf35e87e54d01c78bcf81f04c
+      md5: 6f8b1e521243449ce74a6eb7f9a72fcd
       size: 8468
     - path: data/processed_test_data.csv
       hash: md5
