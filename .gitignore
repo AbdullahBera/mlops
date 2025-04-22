@@ -1,0 +1,15 @@
+# MLflow
+mlruns/
+mlflow-artifacts/
+mlflow.db
+.metaflow/
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.env
+.venv
+env/
+venv/
+
